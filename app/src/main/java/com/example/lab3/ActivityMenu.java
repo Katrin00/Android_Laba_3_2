@@ -1,5 +1,6 @@
 package com.example.lab3;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -61,6 +62,8 @@ public class ActivityMenu extends AppCompatActivity {
                 String[] arrFIO = FIO.get(number).split(" ");
                 database.execSQL("INSERT INTO students(first_name, middle_name, last_name, time) " +
                         "VALUES (\'" + arrFIO[1] + "\', \'" + arrFIO[2] + "\', \'" + arrFIO[0] + "\', \'" + data + "\');");
+                Toast toast = Toast.makeText(ActivityMenu.this, "Запись добавлена!", Toast.LENGTH_LONG);
+                toast.show();
                 FIO.remove(number);
 
                 dbHelper.close();
@@ -71,8 +74,9 @@ public class ActivityMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 database = dbHelper.getWritableDatabase();
-
                 database.execSQL("UPDATE students SET first_name = 'Иван', middle_name = 'Иванович', last_name = 'Иванов' WHERE id = (SELECT max(id) FROM students)");
+                Toast toast = Toast.makeText(ActivityMenu.this, "Запись успешно изменена!", Toast.LENGTH_LONG);
+                toast.show();
 
                 dbHelper.close();
             }
