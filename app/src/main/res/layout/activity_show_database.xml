@@ -16,32 +16,32 @@
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="ID"
-                android:textSize="20sp"
-                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textColor="@android:color/holo_red_dark"
                 android:layout_weight="1" android:textStyle="bold"/>
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="ФИО"
-                android:textSize="20sp"
-                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textColor="@android:color/holo_red_dark"
                 android:layout_weight="5" android:textStyle="bold"/>
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Время"
-                android:textSize="20sp"
-                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textColor="@android:color/holo_red_dark"
                 android:layout_weight="1" android:textStyle="bold"/>
 
     </LinearLayout>
@@ -49,6 +49,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_listStudents"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"/>
 
 </LinearLayout>

@@ -115,7 +115,7 @@ public class ActivityMenu extends AppCompatActivity {
         int number;
         String[] arrFIO;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
 
             number = random.nextInt(FIO.size());
 

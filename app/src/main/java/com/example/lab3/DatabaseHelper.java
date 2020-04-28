@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static String DB_NAME = "lab3.db";
+    private static String DB_NAME = "person";
     private static final int DB_VERSION = 2;
     private static String TABLE_NAME = "students";
     private final Context context;
@@ -45,8 +45,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("DROP TABLE old_students");
 
-//        db.execSQL("INSERT INTO students(name, time) VALUES ('new', '00:00:00');");
-//        db.execSQL("INSERT INTO students(name, time) VALUES ('new', '00:00:00');");
-//        db.execSQL("INSERT INTO students(name, time) VALUES ('new', '00:00:00');");
     }
 }
